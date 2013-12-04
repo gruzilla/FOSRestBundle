@@ -104,7 +104,7 @@ class RequestBodyParamConverter implements ParamConverterInterface
             $object = $this->serializer->deserialize(
                 $request->getContent(),
                 $configuration->getClass(),
-                $request->getContentType(),
+                $request->getRequestFormat(),
                 $context
             );
         } catch (UnsupportedFormatException $e) {
